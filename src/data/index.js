@@ -11,9 +11,11 @@ const newSpicyFoods = [
   { name: "5 Alarm Chili", cuisine: "American", heatLevel: 5 },
 ];
 
-// Get one random spicy food from the array
+// Return one random spicy food object from the array newSpicyFoods.
 function randomSpicyFood() {
+  // Random index number up to but including newSpicyFoods.length. 
   const index = Math.floor(Math.random() * newSpicyFoods.length);
+  // Unpack newSpicyFoods object from random index.
   const newSpicyFood = { ...newSpicyFoods[index] };
   newSpicyFood.id = nextId;
   nextId++;
